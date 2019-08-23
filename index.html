@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <form class="form-clientes">
+            <h1 class="form-title">Nuevo Cliente:</h1>
+            <div class="form-control">
+                <input class="input-form" type="text" id="cn" required>
+                <label class="label-input" for="cn">* Nombre</label>
+            </div>
+            <div class="form-control">
+                <input class="input-form" type="text" id="ca" required>
+                <label class="label-input" for="ca">* Apellido</label>
+            </div>
+            <div class="form-control">
+                <input class="input-form" type="number" id="cd" required>
+                <label class="label-input" for="cd">* DNI</label>
+            </div>
+            <div class="telefonos-container">
+                <div class="form-control">
+                    <div class="form-subcontrol">
+                        <input required class="input-form" type="tel" id="ctn0">
+                        <label class="label-input" for="ctn0">* Telefono</label>
+                    </div>
+                    <div class="form-subcontrol">
+                        <input class="input-form" type="text" id="ctt0">
+                        <label class="label-input" for="ctt0">Tipo</label>
+                    </div>
+                </div>
+            </div>
+            <p class="invality">Los campos * son obligatorios</p>
+            <div class="buttons-container">
+                <button type="button" class="btn btn-agregartelefono">Agregar otro teléfono</button>
+                <button type="button" class="btn btn-quitartelefono" disabled>Quitar teléfono</button>
+                <button type="submit" class="btn btn-submit">Agregar a tabla</button>
+                <button type="button" class="btn btn-cancelar">Cancelar</button>
+            </div>
+        </form>
+        <div class="table-container">
+            <table class="tabla-clientes">
+                <thead>
+                    <tr class="table-row">
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                        <th>Telefonos</th>
+                        <th class="table-actions">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="container">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

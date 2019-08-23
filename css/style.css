@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+body {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    background-color: #202022;
+    overflow-x: hidden;
+}
+
+.main-container {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    background-color: #202022;
+    overflow-x: hidden;
+    margin: 0 auto 20rem;
+    max-width: 1000px;
+}
+
+.table-actions {
+    display: block;
+    position: absolute;
+    right: -15%;
+    bottom: 0%;
+    z-index: -1;
+}
+
+.table-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    z-index: -1;
+}
+
+.form-clientes {
+    width: 80%;
+    margin: auto;
+}
+
+.form-title {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.form-control {
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 3rem auto 3rem;
+}
+
+.form-subcontrol {
+    width: 100%;
+    position: relative;
+}
+
+.form-subcontrol:first-child input {
+    margin-right: .3rem;
+}
+
+.input-form {
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    width: 100%;
+    padding: .2rem .5rem;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.label-input {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transition: .3s;
+}
+
+.input-full {
+    top: -100%;
+    font-size: .7rem;
+}
+
+.input-form:focus {
+    outline: none;
+}
+
+.input-form:focus+.label-input {
+    top: -100%;
+    font-size: .7rem;
+}
+
+.vality-input {
+    border-color: rgb(71, 204, 38);
+}
+
+.invality-input {
+    position: relative;
+    border-color: rgb(255, 19, 19);
+}
+
+.invality {
+    width: 80%;
+    margin: 0 auto 1rem;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgba(255, 19, 19, 0.5);
+    opacity: 0;
+    transition: .3s;
+}
+
+.show-alert {
+    opacity: 1;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    flex: 1;
+    padding: .5rem 1rem;
+    border: none;
+}
+
+.btn-agregartelefono {
+    background-color: rgb(71, 204, 38);
+}
+
+.btn-quitartelefono {
+    background-color: rgb(255, 19, 19);
+}
+
+.btn-submit {
+    background-color: rgb(19, 94, 255)
+}
+
+.btn-cancelar {
+    background-color: rgb(255, 19, 19);
+    display: none;
+}
+
+.btn-quitartelefono:disabled {
+    background-color: rgb(228, 72, 72)
+}
+
+.btn-agregartelefono:disabled {
+    background-color: rgb(97, 185, 75);
+}
+
+.show-button {
+    display: block;
+}
+
+.tabla-clientes {
+    border-spacing: 0;
+    width: 90%;
+    position: relative;
+}
+
+.table-row {
+    display: flex;
+}
+
+.table-row th,
+.table-row td,
+tr td {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+    margin: auto;
+}
+
+.container tr {
+    display: flex;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.container tr:nth-child(even) {
+    background-color: #374140;
+}
+
+.container tr:nth-child(odd) {
+    background-color: #2A2C2B;
+}
+
+.container tr:nth-child(even) .config-td {
+    background-color: #374140;
+}
+
+.container tr:nth-child(odd) .config-td {
+    background-color: #2A2C2B;
+}
+
+.config-td {
+    display: flex;
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    right: 0%;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .3s;
+    z-index: -1;
+}
+
+.container tr:hover .config-td {
+    right: -17%;
+}
+
+.config-td:hover {
+    right: -17%;
+}
+
+.icon,
+.btn {
+    cursor: pointer;
+}
+
+.icon {
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin: .5rem;
+    background-size: cover;
+    border: none;
+}
+
+.icon-pencil {
+    background-image: url('https://image.flaticon.com/icons/svg/61/61456.svg');
+    background-color: rgb(71, 204, 38);
+}
+
+.icon-delete {
+    background-image: url('https://static.thenounproject.com/png/26894-200.png');
+    background-color: rgb(255, 19, 19)
+}
+
+.row-edit {
+    border: 2px solid rgb(71, 204, 38)
+}
+
+.icon-pencil:disabled {
+    background-color: rgb(97, 185, 75);
+}
+
+.icon-delete:disabled {
+    background-color: rgb(228, 72, 72)
+}
+
+@media screen and (max-width: 960px) {
+    .table-actions {
+        position: initial;
+    }
+    .tabla-clientes {
+        width: 100%;
+        min-width: 720px;
+    }
+    .config-td {
+        position: initial;
+        flex: 1;
+        z-index: 1;
+    }
+    .table-container {
+        margin: auto;
+        width: 80%;
+        overflow-x: scroll;
+    }
+}
